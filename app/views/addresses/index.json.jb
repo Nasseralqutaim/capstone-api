@@ -1,0 +1,8 @@
+@addresses.map do |address|
+  {
+    
+    id: address.id,
+    city: address.city,
+    state: address.state,
+  }
+end

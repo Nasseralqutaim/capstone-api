@@ -1,0 +1,14 @@
+json = 
+{
+  id: @address.id,
+  city: @address.city,
+  state: @address.state,
+  created_at: @address.created_at,
+  updated_at: @address.updated_at
+
+  
+}
+
+json 
+
+

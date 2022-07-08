@@ -1,0 +1,60 @@
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+
+### Sessions create (login)                      
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+
+
+
+
+### Address_users create 
+Post http://localhost:3000/address_users.json
+Content-Type: application/json
+
+{
+  "user_id": 3 ,
+  "address_id": 2
+}
+
+
+
+
+### Addresses Show
+GET http://localhost:3000/addresses/1.json
+
+### Addresses Index
+GET http://localhost:3000/addresses.json
+
+
+
+
+
+### Users show 
+GET http://localhost:3000/users/3.json
+
+
+
+
+
+
+### Artifacts show 
+GET http://localhost:3000/artifacts/1.json
+
+### Artifacts Index
+GET http://localhost:3000/artifacts.json
+
+
+
+
+
+# todo: 
+  # USING `jb` add :
+      # User show 
+      # artifact index 
+      # artifact show 
+      
+

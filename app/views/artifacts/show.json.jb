@@ -1,0 +1,11 @@
+json = 
+{
+  id: @artifact.id,
+  street: @artifact.street,
+  url: @artifact.url,
+  created_at: @artifact.created_at,
+  updated_at: @artifact.updated_at
+}
+
+
+json

@@ -1,0 +1,6 @@
+@artifacts.map do |artifact|
+  {
+    id: artifact.id,
+    url: artifact_url(artifact, format: :json)
+  }
+end
