@@ -2,10 +2,15 @@
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
+{
+  "password": "123456", 
+  "email": "Sarah@test.com"
+}
 
 ### Sessions create (login)                      
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
+
 
 
 
@@ -51,11 +56,4 @@ GET http://localhost:3000/artifacts.json
 
 
 
-
-# todo: 
-  # USING `jb` add :
-      # User show 
-      # artifact index 
-      # artifact show 
-      
 
