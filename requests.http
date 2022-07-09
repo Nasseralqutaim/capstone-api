@@ -44,6 +44,7 @@ GET http://localhost:3000/users/3.json
 ### Artifacts show 
 GET http://localhost:3000/artifacts/1.json
 
+
 ### Artifacts Index
 GET http://localhost:3000/artifacts.json
 

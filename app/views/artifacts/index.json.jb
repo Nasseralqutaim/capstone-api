@@ -1,6 +1,8 @@
 @artifacts.map do |artifact|
   {
+    
     id: artifact.id,
-    url: artifact_url(artifact, format: :json)
+    street: artifact.street,
+    url: artifact.url,
   }
 end
