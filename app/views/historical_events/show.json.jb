@@ -1,0 +1,9 @@
+json = 
+ {
+  id: @historical_event.id,
+  address_id: @historical_event.address_id,
+  year: @historical_event.year,
+  description: @historical_event.description,
+  created_at: @historical_event.created_at,
+  updated_at: @historical_event.updated_at
+}

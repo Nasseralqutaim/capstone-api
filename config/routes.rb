@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get "/addresses" => "addresses#index"
   get "/artifacts/:id" => "artifacts#show"
   get "/artifacts" => "artifacts#index"
+  get "/historical_events" => "historical_events#index"
+  get "/historical_events/:id" => "historical_events#show"
+
   
 end
 

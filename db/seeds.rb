@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or create!d alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create!([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create!(name: "Luke", movie: movies.first)
+
 
 
 require "csv"
@@ -13,14 +7,14 @@ csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
 
 data = csv.map do |row|
   address = Address.find_or_create_by(city: row["City "], state: row["State"])
-  artifact = Artifact.create(address_id: address.id, url: row["External Link"], street: row["Street & Number"])
-end
+  artifact = Artifact.create(address_id: address.id, name: row["Property Name"],url: row["External Link"], street: row["Street & Number"])
+end    
 
 
 
 
 
-
+# 
 
 
 User.create!(name: "Nasser", email: "nasser@test.com", password: "password")
@@ -55,6 +49,16 @@ AddressUser.create!(address_id:2, user_id:2)
 AddressUser.create!(address_id:3, user_id:2)
 AddressUser.create!(address_id:3, user_id:3)
 AddressUser.create!(address_id:1, user_id:3)
+
+
+
+
+HistoricalEvent.create(address_id:360, year:1871, description: "The Great Chicago Fire was a conflagration that burned in the American city of Chicago during October 8–10, 1871. The fire killed approximately 300 people, destroyed roughly 3.3 square miles of the city including over 17,000 structures, and left more than 100,000 residents homeless.")
+
+HistoricalEvent.create(address_id:360, year:1877, description: "In late July of 1877, Chicagoans played their part in the first nationwide uprising of workers. On July 16, railroad workers in Martinsburg, West Virginia, walked off the job to protest a 10 percent wage cut leveled by their employer, the Baltimore & Ohio Railroad. Strikes to protest cutbacks in the midst of a period of nationwide economic depression soon spread westward across the country. News of attempts to control boisterous crowds fueled worker protest and sporadic violence.")
+
+HistoricalEvent.create(address_id:360, year:1995, description: "On July 12, 1995, a dangerous hot-air mass settled over Chicago, producing three consecutive days of temperatures over 99 degrees Fahrenheit, heat indices (which measure the heat experienced by a typical person) around 120, high humidity, and little evening cooling. The heat wave was not the most extreme weather system in the city's history, but it proved to be Chicago's most deadly environmental event. During the week of the most severe weather, 485 city residents, many of whom were old, alone, and impoverished, died of causes that medical examiners attributed to the heat. Several hundred decedents were never autopsied, though, and after the event the Chicago Department of Public Health discovered that 739 Chicagoans in excess of the norm had perished while thousands more had been hospitalized for heat-related problems.")
+
 
 
 

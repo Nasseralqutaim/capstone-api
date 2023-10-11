@@ -4,5 +4,6 @@ class Address < ApplicationRecord
 
   
   has_many :artifacts
+  has_many :historical_events
 
 end

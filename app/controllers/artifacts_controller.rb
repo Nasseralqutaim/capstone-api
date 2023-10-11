@@ -1,5 +1,5 @@
 class ArtifactsController < ApplicationController
-  def inedx 
+  def index 
     @artifacts = Artifact.all
     render template: "artifacts/index"
   end 
